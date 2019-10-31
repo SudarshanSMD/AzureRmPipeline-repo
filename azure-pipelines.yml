@@ -2,8 +2,8 @@ steps:
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
     deploymentScope: 'Resource Group'
-    azureSubscription: 'AzureRmPipeline-conn'
-   # ConnectedServiceName: 'AzureRmPipeline-conn'
+    #azureSubscription: 'AzureRmPipeline-conn'
+    ConnectedServiceName: 'AzureRmPipeline-conn'
     subscriptionName: '16195a49-804b-4707-bb52-686a311b9b98'
     action: 'Create Or Update Resource Group'
     resourceGroupName: 'armsterdamPipeline'
