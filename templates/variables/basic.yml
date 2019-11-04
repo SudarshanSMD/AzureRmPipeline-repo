@@ -1,0 +1,10 @@
+# File: variables/build.yml
+variables:
+- name: vmImage
+  value: vs2017-win2016
+- name: arch
+  value: x64
+- name: config
+  value: debug
+- name: subscriptionName
+  value: 16195a49-804b-4707-bb52-686a311b9b98
