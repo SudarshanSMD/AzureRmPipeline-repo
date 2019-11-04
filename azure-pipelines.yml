@@ -1,12 +1,2 @@
 steps:
-- task: AzureResourceManagerTemplateDeployment@3
-  inputs:
-    deploymentScope: 'Resource Group'
-    ConnectedServiceName: 'AzureRmPipeline-conn'
-    subscriptionName: '16195a49-804b-4707-bb52-686a311b9b98'
-    action: 'Create Or Update Resource Group'
-    resourceGroupName: 'armsterdamPipeline2'
-    location: 'Central US'
-    templateLocation: 'Linked artifact'
-    csmFile: 'CreateAzureStorage/azuredeploy.json'
-    deploymentMode: 'Incremental'
+- template: templates/storage.template.yml
