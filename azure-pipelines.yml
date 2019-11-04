@@ -1,2 +1,8 @@
+variables:
+- template: variables/basic.yml  # Template reference
+
+
 steps:
 - template: templates/storage.template.yml
+  parameters:
+    subscriptionName: ${{ variables.subscriptionName }}

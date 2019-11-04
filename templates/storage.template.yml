@@ -1,12 +1,9 @@
-variables:
-- template: variables/basic.yml  # Template reference
-
 steps:
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
     deploymentScope: 'Resource Group'
     ConnectedServiceName: 'AzureRmPipeline-conn'
-    subscriptionName:  ${{ variables.subscriptionName }}
+    subscriptionName:  ${{ parameters.subscriptionName }}
     action: 'Create Or Update Resource Group'
     resourceGroupName: 'armsterdamPipeline'
     location: 'Central US'
